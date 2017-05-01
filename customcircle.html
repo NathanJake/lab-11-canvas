@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="300" height="300">
+</canvas>
+<script>
+function draw() {
+	var color = prompt("What color should the circle be?");
+	var radius = prompt("What should the radius be?");
+    var sketch = document.getElementById('sketch');
+    var context = sketch.getContext("2d");
+
+	context.fillStyle = color;
+	context.beginPath();
+	context.arc(150, 150, radius, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+}
+</script>
+</body>
+</html>
